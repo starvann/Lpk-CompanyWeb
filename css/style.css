@@ -1,0 +1,237 @@
+:root {
+    --primary: #b2002e;
+    --bg: #ffffff;
+    --second:#7c6a67;
+    --third:#ded0ba;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    min-height: 2000px;
+    font-family: 'Poppins', sans-serif ;
+    background-color: var(--bg);
+    color: var(--second)
+
+}
+
+/* Navabar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary) ;
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    text-decoration: none;
+}
+
+
+
+.navbar .navbar-nav a {
+    color: black;
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 2 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color:var(--third)
+}
+
+.logo {
+        max-width: 25%;
+        padding: 1rem ;
+    }
+
+
+
+/* Dropdown Button */
+.dropbtn {
+  background-color:var(--primary);
+  color: black;
+  padding: 16px;
+  font-size: 1.8rem;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--bg);
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:rgba(176, 46, 32, 0.8%);} 
+
+/* Hero */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(herosection.jpg);
+    position: relative;
+}
+
+
+.hero .wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100px;
+    height: 100px; 
+    border: 1px solid black;
+}
+
+.hero .content {
+    font-size: 30px;
+    padding: 1.4rem 7%;
+    color: black;
+    font-weight: 600;
+}
+.hero::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* gradasi */
+    background: linear-gradient(0deg, #b2002e 3%, rgba(255, 255, 255, 0) 25%); 
+
+}
+
+.content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white
+}
+
+.cta
+{
+    font-size: xx-large;
+    padding: 1rem;
+    color: white;
+    background-color: var(--primary);
+    
+}
+
+/* Text */
+.red {
+    color: var(--primary);
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.large-label {
+    font-size: xx-large;
+    font-weight: 700;
+    padding: 1rem;
+    background-color: white;
+    text-align: left;
+}
+
+.large {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.justify {
+    text-align: justify;
+}
+
+/* Visi Misi */
+
+.visimisi {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(visimisi.png);
+    position: relative;
+}
+
+.visimisi::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* gradasi */
+    background: linear-gradient(180deg, #b2002e 3%, rgba(255, 255, 255, 0) 15%);
+
+}
+
+.visimisi .content {
+    font-size: 30px;
+    padding: 1.4rem 7%;
+    color: black;
+    font-weight: 600;
+}
+
+/* Image Transisi */
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100px;
+    height: 100px; 
+    border: 1px solid black;
+}
+
+#slide {
+    position: absolute;
+    left: -100px;
+    width: 100px;
+    height: 100px;
+    background: blue;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
